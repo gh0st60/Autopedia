@@ -13,9 +13,13 @@ namespace Autopedia.Models
     {
         [Column("ID")]
         public int Id { get; set; }
+        [Required]
         [Column(TypeName = "text")]
         public string Team { get; set; }
-        [Column(TypeName = "text")]
+        [Required]
+        [StringLength(4000)]
         public string Description { get; set; }
+        [StringLength(4000)]
+        public string PhotoUrl { get; set; }
     }
 }

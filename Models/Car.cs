@@ -17,7 +17,9 @@ namespace Autopedia.Models
         [Column(TypeName = "text")]
         public string Brand { get; set; }
         [Required]
-        [Column(TypeName = "text")]
+        [StringLength(4000)]
         public string Description { get; set; }
+        [StringLength(4000)]
+        public string PhotoUrl { get; set; }
     }
 }

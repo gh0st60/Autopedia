@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Autopedia.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Autopedia
 {
@@ -26,7 +27,7 @@ namespace Autopedia
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<CarsDBContext>();
+            services.AddDbContext<CarsDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConn")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
