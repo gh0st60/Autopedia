@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Autopedia.Models
 {
-    [Keyless]
     public partial class FormulaTeam
     {
+        [Key]
         [Column("ID")]
         public int Id { get; set; }
         [Required]

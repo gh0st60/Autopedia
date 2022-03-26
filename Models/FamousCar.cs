@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Autopedia.Models
 {
-    [Keyless]
     public partial class FamousCar
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         [StringLength(4000)]
